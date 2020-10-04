@@ -7,6 +7,7 @@ const routesV1 = require('./routes/v1');
 const app = express();
 
 dotenv.config();
+const { HOST } = process.env || '0.0.0.0';
 const { PORT } = process.env || 4000;
 const { MONGO } = process.env;
 console.log(PORT, MONGO);
@@ -23,7 +24,7 @@ mongoose.connect(MONGO, {
   useCreateIndex: true,
 }).then(() => {
   console.log('Connected to Mongo DB');
-  app.listen(PORT, () => {
+  app.listen(PORT, HOST, () => {
     console.log(`Running on port ${PORT}!`);
   });
 }).catch((error) => {
