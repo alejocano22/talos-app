@@ -1,0 +1,19 @@
+{
+  "name": "talos-app",
+  "version": "1.0.0",
+  "description": "Talos mobile app",
+  "main": "backend/src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alejocano22/talos-app.git"
+  },
+  "author": "Alejandro Cano Munera - Sebastian Giraldo Gomez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alejocano22/talos-app/issues"
+  },
+  "homepage": "https://github.com/alejocano22/talos-app#readme"
+}
