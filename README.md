@@ -1,2 +1,7 @@
-# talos-app
-Talos mobile app!
+# Talos Events - Backend
+
+
+## Developer by:
+
+- Sebastián Giraldo Gómez
+- Alejandro Cano Múnera
