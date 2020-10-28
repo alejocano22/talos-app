@@ -3,7 +3,8 @@ const Events = require('../../mongo/models/events');
 const createEvent = async (req, res) => {
   try {
     const { 
-      eventName,
+      name,
+      date,
       author,
       description,
       imageLink,
@@ -11,7 +12,8 @@ const createEvent = async (req, res) => {
     } = req.body;
 
     await Events.create({
-      eventName,
+      name,
+      date,
       author,
       description,
       imageLink,
@@ -56,7 +58,8 @@ const updateEvent = async (req, res) => {
   try {
     const {
       eventId,
-      eventName,
+      name,
+      date,
       author,
       description,
       imageLink,
@@ -64,7 +67,8 @@ const updateEvent = async (req, res) => {
     } = req.body;
 
     await Events.findByIdAndUpdate(eventId, {
-      eventName,
+      name,
+      date,
       author,
       description,
       imageLink,
@@ -89,7 +93,7 @@ const getEvents = async (req, res) => {
     res.send({
       status: 'OK',
       message: 'Get events successfully',
-      data: events,
+      events,
     });
   } catch (error) {
     res.status(500).send({
