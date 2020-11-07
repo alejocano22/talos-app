@@ -4,20 +4,26 @@ const createEvent = async (req, res) => {
   try {
     const { 
       name,
-      date,
-      author,
-      description,
-      imageLink,
-      accessLink, 
-    } = req.body;
-
-    await Events.create({
-      name,
-      date,
+      startDate,
+      endDate,
+      days,
       author,
       description,
       imageLink,
       accessLink,
+      registerLink,
+    } = req.body;
+
+    await Events.create({
+      name,
+      startDate,
+      endDate,
+      days,
+      author,
+      description,
+      imageLink,
+      accessLink,
+      registerLink,
     });
 
     res.send({
@@ -59,20 +65,26 @@ const updateEvent = async (req, res) => {
     const {
       eventId,
       name,
-      date,
+      startDate,
+      endDate,
+      days,
       author,
       description,
       imageLink,
-      accessLink, 
+      accessLink,
+      registerLink,
     } = req.body;
 
     await Events.findByIdAndUpdate(eventId, {
       name,
-      date,
+      startDate,
+      endDate,
+      days,
       author,
       description,
       imageLink,
-      accessLink, 
+      accessLink,
+      registerLink,
     });
 
     res.send({

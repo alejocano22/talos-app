@@ -4,11 +4,14 @@ const { Schema } = mongoose;
 
 const eventSchema = new Schema({
   name: { type: String, required: true },
-  date: { type: Date, require: true},
+  startDate: { type: Date, required: true},
+  endDate: { type: Date, required: true },
+  days: { type: [String], enum: ['Monday','Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'] },
   author: { type: String, required: true },
   description: { type: String, required: true },
   imageLink: { type: String, required: true },
   accessLink: { type: String, required: true },
+  registerLink: { type: String, required: true },
 }, {
   timestamps: true,
 });
