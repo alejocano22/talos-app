@@ -10,8 +10,8 @@ const eventSchema = new Schema({
   author: { type: String, required: true },
   description: { type: String, required: true },
   imageLink: { type: String, required: true },
-  accessLink: { type: String, required: true },
-  registerLink: { type: String, required: true },
+  accessLink: { type: String },
+  registerLink: { type: String },
 }, {
   timestamps: true,
 });
