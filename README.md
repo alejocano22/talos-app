@@ -18,18 +18,28 @@
 
 #### Tipo: POST
 
-#### Path: 
+#### Path: /api/v1/users/login
 
-#### Payload:
+#### Payload de ejemplo:
 
 ```json
-Here goes your json object definition
+{
+    "email": "user@email.com",
+    "password": "password"
+}
 ```
 
 #### Respuesta:
 
 ```json
-Here goes your json object definition
+{
+    "status": "OK",
+    "message": "Login successfully!",
+    "data": {
+        "token": "authToken",
+        "expiresIn": 3600
+    }
+}
 ```
 
 #### Crear evento: 
@@ -40,26 +50,27 @@ Here goes your json object definition
 
 #### Header: Authorization token.
 
-#### Payload: 
+#### Payload de ejemplo: 
 ```json
 {
-    "eventName": "Yoga Class",
-    "author": "Sebastian Cano",
-    "description": "In this class, postures are practiced to align, strengthen and promote flexibility in the body",
-    "imageLink": "https://event-image.png",
-    "accessLink": "https://event1.com"
+    "name": "Financial Talk",
+    "startDate": "2020-11-20T19:30",
+    "endDate": "2020-11-20T21:30",
+    "days": ["Monday", "Tuesday"],
+    "author": "Alejandro Diaz",
+    "description": "These Talks provide insightful perspectives and practical advice to help you face your financial situation with honesty and compassion.",
+    "imageLink": "https://s3.amazonaws.com/pas-wordpress-media/content/uploads/2017/11/financial-contingency.jpg",
+    "accessLink": "https://meet.google.com/jeh-dgdr-hic",
+    "registerLink": "https://forms.gle/og8MT2tc1V3jbqam6"
 }
 ```
 
-#### Response:
+#### Respuesta:
 
 ```json
 {
-    "eventName": "Yoga Class",
-    "author": "Sebastian Cano",
-    "description": "In this class, postures are practiced to align, strengthen and promote flexibility in the body",
-    "imageLink": "https://event-image.png",
-    "accessLink": "https://event1.com"
+    "status": "OK",
+    "message": "Event created successfully"
 }
 ```
 
@@ -71,26 +82,33 @@ Here goes your json object definition
 
 #### Header: Authorization token.
 
-#### Payload: 
+#### Payload de ejemplo: 
 ```json
 {
-    "eventName": "Yoga Class",
-    "author": "Sebastian Cano",
-    "description": "In this class, postures are practiced to align, strengthen and promote flexibility in the body",
-    "imageLink": "https://event-image.png",
-    "accessLink": "https://event1.com"
-}
+    "days": [
+        "Tuesday",
+        "Thursday"
+    ],
+    "eventId": "5fa6c1a649933c0017bdf0ab",
+    "name": "Yoga Class",
+    "startDate": "2020-11-03T19:30:00.000Z",
+    "endDate": "2020-12-31T19:30:00.000Z",
+    "author": "Angelica Restrepo",
+    "description": "In this class the basic, foundational yoga postures are practiced to align, strengthen and promote flexibility in the body.",
+    "imageLink": "https://www.yogajournal.com/.image/t_share/MTYwNjk4NDMwNDY3ODc2ODM5/yogaclass-twistedlowlunge.jpg",
+     "accessLink": "https://meet.google.com/jeh-dgdr-hic",
+    "registerLink": "https://forms.gle/og8MT2tc1V3jbqam6",
+    "createdAt": "2020-11-07T15:47:50.732Z",
+    "updatedAt": "2020-11-07T15:47:50.732Z"
+ }
 ```
 
-#### Response:
+#### Respuesta:
 
 ```json
 {
-    "eventName": "Yoga Class",
-    "author": "Sebastian Cano",
-    "description": "In this class, postures are practiced to align, strengthen and promote flexibility in the body",
-    "imageLink": "https://event-image.png",
-    "accessLink": "https://event1.com"
+    "status": "OK",
+    "message": "Event updated successfully"
 }
 ```
 
@@ -102,26 +120,19 @@ Here goes your json object definition
 
 #### Header: Authorization token.
 
-#### Payload: 
+#### Payload de ejemplo: 
 ```json
 {
-    "eventName": "Yoga Class",
-    "author": "Sebastian Cano",
-    "description": "In this class, postures are practiced to align, strengthen and promote flexibility in the body",
-    "imageLink": "https://event-image.png",
-    "accessLink": "https://event1.com"
+    "eventId": "5fb2d96dd9efb70017a5332b"
 }
 ```
 
-#### Response:
+#### Respuesta:
 
 ```json
 {
-    "eventName": "Yoga Class",
-    "author": "Sebastian Cano",
-    "description": "In this class, postures are practiced to align, strengthen and promote flexibility in the body",
-    "imageLink": "https://event-image.png",
-    "accessLink": "https://event1.com"
+    "status": "OK",
+    "message": "Event deleted successfully"
 }
 ```
 
@@ -135,10 +146,26 @@ Here goes your json object definition
 
 ```json
 {
-    "eventName": "Yoga Class",
-    "author": "Sebastian Cano",
-    "description": "In this class, postures are practiced to align, strengthen and promote flexibility in the body",
-    "imageLink": "https://event-image.png",
-    "accessLink": "https://event1.com"
+    "status": "OK",
+    "message": "Get events successfully",
+    "events": [
+        {
+            "days": [
+                "Tuesday",
+                "Thursday"
+            ],
+            "_id": "5fa6c1a649933c0017bdf0ab",
+            "name": "Yoga Classes",
+            "startDate": "2020-11-03T19:30:00.000Z",
+            "endDate": "2020-12-31T19:30:00.000Z",
+            "author": "Angelica Restrepo",
+            "description": "In this class the basic, foundational yoga postures are practiced to align, strengthen and promote flexibility in the body.",
+            "imageLink": "https://www.yogajournal.com/.image/t_share/MTYwNjk4NDMwNDY3ODc2ODM5/yogaclass-twistedlowlunge.jpg",
+            "accessLink": "https://meet.google.com/jeh-dgdr-hic",
+            "registerLink": "https://forms.gle/og8MT2tc1V3jbqam6",
+            "createdAt": "2020-11-07T15:47:50.732Z",
+            "updatedAt": "2020-11-07T15:47:50.732Z"
+        }
+    ]
 }
 ```
