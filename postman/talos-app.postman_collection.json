@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "acaadd68-0f1f-4eb1-bb4e-949086bd05a3",
+		"name": "talos-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create event",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImlhdCI6MTYwNDc2MjUzNiwiZXhwIjoxNjA0NzY2MTM2fQ.b9Z2G5UJ13No6gSwx9Gulr9njzWKK9Zwg-2pMNhDTyk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Financial Talk\",\n    \"startDate\": \"2020-11-20T19:30\",\n    \"endDate\": \"2020-11-20T21:30\",\n    \"days\": [],\n    \"author\": \"Alejandro Diaz\",\n    \"description\": \"These Talks provide insightful perspectives and practical advice to help you face your financial situation with honesty and compassion.\",\n    \"imageLink\": \"https://s3.amazonaws.com/pas-wordpress-media/content/uploads/2017/11/financial-contingency.jpg\",\n    \"accessLink\": \"https://meet.google.com/jeh-dgdr-hic\",\n    \"registerLink\": \"https://forms.gle/og8MT2tc1V3jbqam6\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://talos-app.herokuapp.com/api/v1/events/create",
+					"protocol": "https",
+					"host": [
+						"talos-app",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"events",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete event",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImlhdCI6MTYwNDc2MjUzNiwiZXhwIjoxNjA0NzY2MTM2fQ.b9Z2G5UJ13No6gSwx9Gulr9njzWKK9Zwg-2pMNhDTyk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"eventId\": \"5fa6bfe549933c0017bdf0a9\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://talos-app.herokuapp.com/api/v1/events/delete",
+					"protocol": "https",
+					"host": [
+						"talos-app",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"events",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-all events",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "https://talos-app.herokuapp.com/api/v1/events/get-all",
+					"protocol": "https",
+					"host": [
+						"talos-app",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"events",
+						"get-all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update event",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImlhdCI6MTYwNDc2MjUzNiwiZXhwIjoxNjA0NzY2MTM2fQ.b9Z2G5UJ13No6gSwx9Gulr9njzWKK9Zwg-2pMNhDTyk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"eventId\": \"5fa6bfe549933c0017bdf0a9\",\n    \"name\": \"Yoga Classes\",\n    \"startDate\": \"2020-11-18T19:30\",\n    \"endDate\": \"2020-11-18T19:30\",\n    \"days\": [\"Monday\", \"Sunday\"],\n    \"author\": \"Maria Cardona\",\n    \"description\": \"In this class the basic, foundational yoga postures are practiced to align, strengthen and promote flexibility in the body.\",\n    \"imageLink\": \"https://image-cdn.essentiallysports.com/wp-content/uploads/20200601234858/valorant-personajes-1.jpg\",\n    \"accessLink\": \"https://meet.google.com/jeh-dgdr-hic\",\n    \"registerLink\": \"https://meet.google.com/jeh-dgdr-hic\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://talos-app.herokuapp.com/api/v1/events/update",
+					"protocol": "https",
+					"host": [
+						"talos-app",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"events",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"admin@admin.com\",\n    \"password\": \"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://talos-app.herokuapp.com/api/v1/users/login",
+					"protocol": "https",
+					"host": [
+						"talos-app",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
