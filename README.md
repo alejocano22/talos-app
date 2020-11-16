@@ -42,7 +42,7 @@
 }
 ```
 
-#### Crear evento: 
+### Crear evento: 
 
 #### Tipo: POST
 
@@ -74,7 +74,7 @@
 }
 ```
 
-#### Actualizar evento: 
+### Actualizar evento: 
 
 #### Tipo: POST
 
@@ -112,7 +112,7 @@
 }
 ```
 
-#### Eliminar evento: 
+### Eliminar evento: 
 
 #### Tipo: POST
 
@@ -136,7 +136,7 @@
 }
 ```
 
-#### Listar eventos: 
+### Listar eventos: 
 
 #### Tipo: GET
 
