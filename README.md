@@ -6,6 +6,8 @@
 - Sebastián Giraldo Gómez
 - Alejandro Cano Múnera
 
+### Android App: https://github.com/sgiraldog/talos-android-app
+### iOS App: https://github.com/sgiraldog/talos-ios-app
 
 ## Endpoints:
 
