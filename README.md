@@ -36,6 +36,8 @@ Here goes your json object definition
 
 #### Path: /api/v1/events/create
 
+#### Header: Authorization token.
+
 #### Payload: 
 ```json
 {
@@ -46,6 +48,86 @@ Here goes your json object definition
     "accessLink": "https://event1.com"
 }
 ```
+
+#### Response:
+
+```json
+{
+    "eventName": "Yoga Class",
+    "author": "Sebastian Cano",
+    "description": "In this class, postures are practiced to align, strengthen and promote flexibility in the body",
+    "imageLink": "https://event-image.png",
+    "accessLink": "https://event1.com"
+}
+```
+
+#### Actualizar evento: 
+
+#### Tipo: POST
+
+#### Path: /api/v1/events/update
+
+#### Header: Authorization token.
+
+#### Payload: 
+```json
+{
+    "eventName": "Yoga Class",
+    "author": "Sebastian Cano",
+    "description": "In this class, postures are practiced to align, strengthen and promote flexibility in the body",
+    "imageLink": "https://event-image.png",
+    "accessLink": "https://event1.com"
+}
+```
+
+#### Response:
+
+```json
+{
+    "eventName": "Yoga Class",
+    "author": "Sebastian Cano",
+    "description": "In this class, postures are practiced to align, strengthen and promote flexibility in the body",
+    "imageLink": "https://event-image.png",
+    "accessLink": "https://event1.com"
+}
+```
+
+#### Eliminar evento: 
+
+#### Tipo: POST
+
+#### Path: /api/v1/events/delete
+
+#### Header: Authorization token.
+
+#### Payload: 
+```json
+{
+    "eventName": "Yoga Class",
+    "author": "Sebastian Cano",
+    "description": "In this class, postures are practiced to align, strengthen and promote flexibility in the body",
+    "imageLink": "https://event-image.png",
+    "accessLink": "https://event1.com"
+}
+```
+
+#### Response:
+
+```json
+{
+    "eventName": "Yoga Class",
+    "author": "Sebastian Cano",
+    "description": "In this class, postures are practiced to align, strengthen and promote flexibility in the body",
+    "imageLink": "https://event-image.png",
+    "accessLink": "https://event1.com"
+}
+```
+
+#### Listar eventos: 
+
+#### Tipo: GET
+
+#### Path: /api/v1/events/get-all
 
 #### Response:
 
