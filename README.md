@@ -142,7 +142,7 @@
 
 #### Path: /api/v1/events/get-all
 
-#### Response:
+#### Respuesta:
 
 ```json
 {
